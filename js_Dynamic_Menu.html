@@ -1,0 +1,33 @@
+<html> <head> <title> _DYNAMIC MENU_ </title>
+<style> .appear { background-color:#FF9473; }
+</style> <script language="Javascript"> <!--
+function change(link,cell) {
+ link.style.color="black";
+ link.style.textDecoration="underline";
+ var vcell=document.getElementById(cell);
+ vcell.style.fontSize="18pt";
+ vcell.style.backgroundColor="#FFF542";
+ }
+ fuction restore(link,cell)  {
+ link.style.textDecoration="none";
+ var vcell=document.getElementById(cell);
+ vcell.style.fontSize="12pt";
+ vcell.style.backgroundColor="#F00542";
+ }
+// -->
+</script> </head> <body bgcolor="Green">
+<center> <table width="300" height="50" border="2"
+  cellspacing="2" cellpading="3">
+<td class="appear" id="athens" width="100">
+<a href="#" onmouseover="change(this,'athens');"
+			onmouseout="restore(this,'athens');">
+ Athina </a> </td>
+<td class="appear" id="salonika" width="100">
+<a href="#" onmouseover="change(this,'salonika');"
+			onmouseout="restore(this,'salonika');">
+ Salonika </a> </td>
+<td class="appear" id="volos" width="100">
+<a href="#" onmouseover="change(this,'volos');"
+			onmouseout="restore(this,'volos');">
+ Volos </a> </td> 
+</table></center> </body> </html>

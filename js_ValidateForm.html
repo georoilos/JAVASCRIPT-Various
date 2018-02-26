@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> <head>
+<title>onblur event</title>
+<script language="Javascript" type="text/javascript">
+<!--
+function ValidateEmail(EmailAddress)
+{	var Location = EmailAddress.indexOf('@')
+	if ( Location == -1)
+{ 	alert('You entered an inaccurate email address.') }
+}
+-->
+</script>
+</head> <body>
+<FORM action="http://www.jimkeogh.com" method="post">
+<P>
+	First Name: <INPUT type="text" name="Fname"/><BR>
+	Last Name: <INPUT type="text" name="Lname"/><BR>
+	Email: <INPUT type="text" name="Email"
+	onblur="ValidateEmail (this.value)"/><BR>
+	<INPUT name="Submit" value="Submit" type="submit"/>
+<INPUT name="Reset" value="Reset" type="reset"/>
+</P>
+</FORM> </body> </html>

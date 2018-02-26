@@ -1,0 +1,46 @@
+### WRITE COOKIE ###
+<html> <head>
+<title>Write Cookie</title>
+<script> <!--
+function WriteCookie() { with (document.CookieWriter) {
+document.cookie = "CustomerName="+ customer.value+";"alert("Cookie Written") }
+}
+-->
+</script> </head> <body>
+<form name="CookieWriter" action="" >
+Enter your name: <input type="text" name="customer" onchange="WriteCookie()"/>
+</FORM> </body> </html>
+-----------------------------------------------------------------------------
+### READ COOKIE ###
+<html> <head>
+<title>Read Cookie</title>
+<script> <!--
+function ReadCookie()
+{	with (document.CookieReader)
+{	if (document.cookie == "")	{ cookiecontent.value = "No cookies" }
+	else	{
+	cookiecontent.value = document.cookie.split('=')[1]
+}	}	}
+-->
+</script> </head> <body>
+<form name="CookieReader" action="" >
+Cookie: <input type="text" name="cookiecontent" /> <BR>
+<INPUT name="Reset" value="Get Cookie" type="button" onclick="ReadCookie()"/>
+</FORM> </body> </html>
+-----------------------------------------------------------------------------
+<html> <head>
+<title>Write Cookie with Expiration Date</title>
+<script> <!--
+function WriteCookie()
+{	var expireDate = new Date
+	expireDate.setMonth(expireDate.getMonth()+3)
+	with (document.CookieWriter)
+{	var CustomerName = customer.value
+	document.cookie = "CustomerName1="+ CustomerName+";expires="+expireDate.toGMTString()
+	alert("Cookie Written")
+}	}
+-->
+</script> </head> <body>
+<form name="CookieWriter" action="" >
+Enter your name: <input type="text" name="customer" onchange="WriteCookie()" />
+</FORM> </body> </html>

@@ -1,0 +1,23 @@
+<html> <head> <script Language="Javascript"> 
+<!--
+var numbers = new Array(10);
+var sorted = false;
+var temp,count = 0;
+for (var i=0;i<numbers.length;i++) 
+	numbers[i] = parseInt(prompt("Give a number : ","0")); 
+document.write("Numbers are : "+numbers.join(",")+"<br>");
+while(!sorted) {
+  sorted=true;
+  for (var i=0;i<numbers.length;i++) {
+    if(numbers[i]>numbers[i+1])  {
+      temp=numbers[i];
+	  numbers[i]=numbers[i+1];
+	  numbers[i+1]=temp;
+	  sorted=false;
+	  }
+    }
+++count;
+document.write(count+"...procedure -=-=-> "+numbers.join(",")+"<br>");
+}
+//-->
+</script> </head> <body> </body> </html>

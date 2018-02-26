@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Read Only</title>
+<script language="Javascript" type="text/javascript">
+<!--
+function SetEmail()
+{
+with (document.forms.Contact)
+{
+if (Fname.value.length >0
+&& Lname.value.length >0)
+{
+Email.readonly = false
+Email.value = Fname.value.charAt(0)
++ Lname.value + '@mcgrawhill.com'
+Email.readonly = true
+}
+}
+}
+-->
+</script>
+</head>
+<body>
+<FORM name="Contact"
+action="http://www.jimkeogh.com" method="post">
+<P>
+First Name: <INPUT type="text"
+name="Fname" onchange="SetEmail()"/><BR>
+Last Name: <INPUT type="text"
+name="Lname" onchange="SetEmail()"/><BR>
+Email: <INPUT type="text"
+name="Email" readonly=true/><BR>
+<INPUT name="Submit" value="Submit" type="submit"/>
+<INPUT name="Reset" value="Reset" type="reset">
+</P>
+</FORM>
+</body>
+</html>
